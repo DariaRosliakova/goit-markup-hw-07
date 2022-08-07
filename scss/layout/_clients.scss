@@ -1,0 +1,39 @@
+.clients {
+    @extend %section;
+&__uppertitle {
+        margin-bottom: 50px;
+    }
+}
+
+.clients-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.clients-list__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    transition: border var(--transition);
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-txt-cl);
+    }
+}
+
+.clients-list__icon {
+    fill: #afb1b8;
+    transition: fill var(--transition);
+    
+    .clients-list__link:hover &,
+    .clients-list__link:focus & {
+        fill: var(--accent-txt-cl);
+    }
+}
+

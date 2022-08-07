@@ -1,0 +1,48 @@
+.header {
+    border-bottom: 1px solid #ECECEC;
+    &__container {
+            
+            display: flex;
+            align-items: center;
+    }
+}
+.contacts-list {
+    display: flex;
+    gap: 50px;
+
+    &__phone,
+    &__mail {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 31px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: calc(16 / 14);
+        letter-spacing: 0.02em;
+        color: var(--secondary-txt-cl);
+    }
+
+    &__tel-text,
+    &__mail-text {
+        transition: color var(--transition)
+    }
+
+    &__icon {
+        margin-right: 10px;
+        fill: var(--secondary-txt-cl);
+        transition: fill var(--transition);
+    }
+
+    &__mail:hover &__icon,
+    &__mail:focus &__icon,
+    &__mail:hover &__mail-text,
+    &__mail:focus &__mail-text,
+    &__phone:hover &__icon,
+    &__phone:focus &__icon,
+    &__phone:hover &__tel-text,
+    &__phone:focus &__tel-text {
+        fill: var(--accent-txt-cl);
+        color: var(--accent-txt-cl);
+    }
+}
